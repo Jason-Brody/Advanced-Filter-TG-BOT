@@ -413,7 +413,7 @@ def gbanstat(bot: Bot, update: Update, args: List[str]):
 @run_async
 def clear_gbans(bot: Bot, update: Update):
     '''Check and remove deleted accounts from gbanlist.
-    By @TheRealPhoenix'''
+    By @AID_3N'''
     banned = sql.get_gban_list()
     deleted = 0
     for user in banned:
@@ -433,7 +433,7 @@ def clear_gbans(bot: Bot, update: Update):
 
 @run_async
 def check_gbans(bot: Bot, update: Update):
-    '''By @TheRealPhoenix'''
+    '''By @AID_3N'''
     banned = sql.get_gban_list()
     deleted = 0
     for user in banned:
@@ -490,7 +490,7 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 - /cleangb : To Remove all Deleted Accounts from gban list
 """
 
-__mod_name__ = "GLOBAL BANS"
+
 
 GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True,
                               filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
